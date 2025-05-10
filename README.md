@@ -39,7 +39,7 @@ cd laravel-quote-sender-using-jobs-and-queues
 composer install
 
 # Install frontend dependencies
-npm install && npm run dev
+npm install
 
 # Copy and configure environment
 cp .env.example .env
@@ -57,7 +57,15 @@ Example:
 # Run migrations and seed the database
 php artisan migrate --seed
 
+# Start Server
+php artisan serve
+npm run dev
+
 # Start the queue worker
 # Open two separate terminals and run the following two commands in separate terminals:
 php artisan queue:work --queue=emails
 php artisan queue:work --queue=logs
+
+# Login credential:
+email: test@example.com
+password: password
